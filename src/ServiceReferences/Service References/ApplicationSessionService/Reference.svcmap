@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9599d3c2-5033-4f3b-ab2a-d22123a2f7ca" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost:8731/ApplicationSessionServiceLibrary/ApplicationSessionService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="cgeers.wordpress.com.wsdl" MetadataType="Wsdl" ID="45d1e0f2-681a-4756-acc3-333f4dc58eb1" SourceId="1" SourceUrl="net.tcp://localhost:8731/ApplicationSessionServiceLibrary/ApplicationSessionService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="51cded1f-4750-48fb-b083-c0f594ce3870" SourceId="1" SourceUrl="net.tcp://localhost:8731/ApplicationSessionServiceLibrary/ApplicationSessionService/mex" />
+    <MetadataFile FileName="cgeers.wordpress.com.xsd" MetadataType="Schema" ID="9beb75ed-d5e0-4903-8ab0-ffa351565025" SourceId="1" SourceUrl="net.tcp://localhost:8731/ApplicationSessionServiceLibrary/ApplicationSessionService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="99d9475b-82c2-4615-84cd-125ab3978813" SourceId="1" SourceUrl="net.tcp://localhost:8731/ApplicationSessionServiceLibrary/ApplicationSessionService/mex" />
+    <MetadataFile FileName="CGeers.Wcf.Server.ApplicationSessionServiceLibrary.xsd" MetadataType="Schema" ID="9297c2dd-16b2-4215-88b8-700f9466d1dd" SourceId="1" SourceUrl="net.tcp://localhost:8731/ApplicationSessionServiceLibrary/ApplicationSessionService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

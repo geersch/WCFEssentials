@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="cgeers.wordpress.com" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="cgeers.wordpress.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="cgeers.wordpress.com/Imports">
+      <xsd:import namespace="cgeers.wordpress.com" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/CGeers.Wcf.Server.ApplicationSessionServiceLibrary" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IApplicationSession_RegisterApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterApplication" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationSession_UnregisterApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnregisterApplication" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationSession_RegisterWindow_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterWindow" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationSession_UnregisterWindow_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnregisterWindow" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationSession_RegisteredClients_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisteredClients" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationSession_RegisteredClients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisteredClientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationSession_MulticastMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:MulticastMessage" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationSession_MessageReceived_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:MessageReceived" />
+  </wsdl:message>
+  <wsdl:portType name="IApplicationSession">
+    <wsdl:operation name="RegisterApplication">
+      <wsdl:input wsaw:Action="cgeers.wordpress.com/IApplicationSession/RegisterApplication" message="tns:IApplicationSession_RegisterApplication_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnregisterApplication">
+      <wsdl:input wsaw:Action="cgeers.wordpress.com/IApplicationSession/UnregisterApplication" message="tns:IApplicationSession_UnregisterApplication_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterWindow">
+      <wsdl:input wsaw:Action="cgeers.wordpress.com/IApplicationSession/RegisterWindow" message="tns:IApplicationSession_RegisterWindow_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnregisterWindow">
+      <wsdl:input wsaw:Action="cgeers.wordpress.com/IApplicationSession/UnregisterWindow" message="tns:IApplicationSession_UnregisterWindow_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisteredClients">
+      <wsdl:input wsaw:Action="cgeers.wordpress.com/IApplicationSession/RegisteredClients" message="tns:IApplicationSession_RegisteredClients_InputMessage" />
+      <wsdl:output wsaw:Action="cgeers.wordpress.com/IApplicationSession/RegisteredClientsResponse" message="tns:IApplicationSession_RegisteredClients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MulticastMessage">
+      <wsdl:input wsaw:Action="cgeers.wordpress.com/IApplicationSession/MulticastMessage" message="tns:IApplicationSession_MulticastMessage_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MessageReceived">
+      <wsdl:output wsaw:Action="cgeers.wordpress.com/IApplicationSession/MessageReceived" message="tns:IApplicationSession_MessageReceived_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CGeers.Wcf.Server.ApplicationSessionServiceLibrary" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CGeers.Wcf.Server.ApplicationSessionServiceLibrary" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfClientApplication">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClientApplication" nillable="true" type="tns:ClientApplication" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClientApplication" nillable="true" type="tns:ArrayOfClientApplication" />
+  <xs:complexType name="ClientApplication">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="PetName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClientApplication" nillable="true" type="tns:ClientApplication" />
+  <xs:simpleType name="MessageUrgency">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Low" />
+      <xs:enumeration value="Guarded" />
+      <xs:enumeration value="Elevated" />
+      <xs:enumeration value="High" />
+      <xs:enumeration value="Severe" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MessageUrgency" nillable="true" type="tns:MessageUrgency" />
+</xs:schema>
